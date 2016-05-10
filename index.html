@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
+    <title>Alexis Tubulekas Portfolio</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/queries.css">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	  <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    
+  
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body ng-controller="SpicyController">
+    <div id="firstPage" ng-hide="hideFirstPage">
+		<header class="clearfix">
+     
+
+      <!--h1>{{hello}}</h1>
+          <input type"text" ng-model="hello"/>-->
+		    <div class="logo col-md-3">
+          
+          <h2 class="logo-text">Alexis Tubulekas</h2>
+          
+
+        </div>
+		    <nav class="clearfix">
+            <ul class="clearfix">
+                <li><a href="#portfolio" class="active"><h2 class="headerText">portfolio</h2></a></li>
+                <li><a href="" ng-click="aboutMe()" class=""><h2 class="headerText">about me</h2></a></li>
+                <li><a href="#contactMe" class="last"><h2 class="headerText">contact</h2></a></li>
+            </ul>
+        </nav>
+        <div class="pullcontainer">
+        <a href="#" id="pull"><i class="fa fa-bars fa-2x"></i></a>
+        </div>     
+		</header>
+    <div class="banner">
+    <ul>
+        <li style="background-image: url('img/02.jpg');">
+          <div class="container">
+            <div class="row">
+              <div  class="col-md-12">
+                <img ng-mouseover="hoverPortrait()"id="portrait" height="175px" width="175px" src="img/CV_Image.jpg">
+                <div ng-mouseover="resetPortrait()" class="hero-title">
+                  Hi! My name is Alexis Tubulekas and I am a student at KTH - The Royal Institute of Technology in Stockholm. I am currently doing my masters in Media Technology. Feel free to contact me!
+                </div>
+                <div id="contactMe">
+                  <a href="https://www.linkedin.com/in/alexis-tubulekas-a758a4108?trk=hp-identity-name"><img class="socMed" height="75px" width="75px" src="img/facebook.png"></a>
+                  <a href="https://www.linkedin.com/in/alexis-tubulekas-a758a4108?trk=hp-identity-name"><img class="socMed" height="75px" width="75px" src="img/linkedIn.png"></a>
+                  <a href="https://www.linkedin.com/in/alexis-tubulekas-a758a4108?trk=hp-identity-name"><img class="socMed" height="75px" width="75px" src="img/mail.png"></a>
+                </div>
+             
+              </div>
+            </div>
+          </div>
+        </li>
+    </ul>
+</div>
+
+    
+      <div id="portfolio"><h1 class="portfolioHeadStyle">Portfolio</h1></div>
+      <div class="arrow"></div>
+    
+    <div id="#portfolio" class="row projects">
+
+        <div class="col-md-3" id="portfolio">
+        <div class="ca-hover">
+          <div class="carousel-img">
+            <img src="img/DQ.jpg">
+          </div>
+          <div class="carousel-avatar">
+          </div>
+          <div class="carousel-content">
+            <h3>Dancing Queez - a Spotify playlist quiz</h3>
+            <div class="abstractDiv"><p class="abstract">This is my final project in the Interactive Programming course. It's a 
+            mobile web app that creates a quiz based on a users Spotify playlist.</p></div>
+           
+            
+          </div>
+          
+          
+        <div id="project1" class="overlay overlayBottom" ng-click="show1()"></div>
+        </div>
+        </div>
+
+        <div class="col-md-3">
+        <div class="ca-hover">
+          <div class="carousel-img">
+            <img src="img/audio.png" alt="Carousel Img">
+          </div>
+          <div class="carousel-avatar">
+          </div>
+          <div class="carousel-content">
+            <h3>Concert Venues</h3>
+            <div><p class="abstract">A paper in the Audio Technology course where we compared the technology and challenges in sound system and acoustics between Friends Arena and Nalen</p></div>
+           
+          </div>
+          <div id="project2" class="overlay" ng-click="show2()"></div>
+        </div>
+        </div>
+
+        <div class="col-md-3" id="project3 "ng-click="show3()">
+        <div class="ca-hover">
+          <div class="carousel-img">
+            <img src="img/kex.png" alt="Carousel Img">
+          </div>
+          <div class="carousel-avatar">
+          </div>
+          <div class="carousel-content">
+            <h3>Bachelor Thesis</h3>
+            <div class="abstractDiv"><p class="abstract">My bachelor thesis was about et, consectetur adipiscing elit. Mauris mattis suscipit est, ut impe</p></div>
+           
+          </div>
+          <div class="overlay"></div>
+        </div>
+        </div>
+
+        <div class="col-md-3">
+        <div class="ca-hover">
+          <div class="carousel-img">
+            <img src="img/c04.jpg" alt="Carousel Img">
+          </div>
+          <div class="carousel-avatar av4">
+          </div>
+          <div class="carousel-content">
+            <h3>Lorem ipsum dolor sit amet consectetur</h3>
+            <div class="abstractDiv"><p class="abstract">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin ed molestie massa.</p></div>
+          </div>
+          <div class="overlay"></div>
+        </div>
+        </div>
+      </div>
+    </div>
+       <div id="project1Content" ng-hide="hideContent1" class="text-inter">
+         <h1 class="projectHead" id="projectHead1">Dancing Queez - Spotify playlist quiz</h1>
+    <div class="container">
+   
+        <div class="col-md-3">
+                 
+        <img class="mySlides" src="img/DQ_2.png" style="width:100%">
+        <img class="mySlides" src="img/c02.png" style="width:100%">
+        <img class="mySlides" src="img/DQ_6.png" style="width:100%">
+        <img class="mySlides" src="img/prototyp2.1.png" style="width:100%">
+
+        <a class="w3-btn-floating" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)">❮</a>
+        <a class="w3-btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)">❯</a>
+
+        
+
+          
+        <div class="divider"></div>
+        </div>
+        <div class="col-md-7 projectText">
+          <h3>Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed.</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa. Nullam condimentum mauris et rhoncus sagittis. Sed eu metus in diam tincidunt egestas non at odio.</p>
+          <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean vitae lectus erat. Duis consequat laoreet velit. Mauris convallis, sapien sit amet scelerisque accumsan, felis urna aliquet nunc, viverra mollis odio tellus a nisl. Nulla lobortis lectus non rutrum viverra. Sed et molestie libero. Sed ut ultrices dui.</p>
+        </div>  
+      </div>
+   
+    </div>
+
+       <div id="project3Content" ng-hide="hideContent3" class="text-inter">
+         <h1 class="projectHead" id="projectHead1">Bachelor Thesis</h1>
+    <div class="container">
+   
+        <div class="col-md-3">
+                 
+        <img src="img/kexx.png" style="width:100%">
+        
+
+          
+        <div class="divider"></div>
+        </div>
+        <div class="col-md-7 projectText">
+          <h3>Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed.</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa. Nullam condimentum mauris et rhoncus sagittis. Sed eu metus in diam tincidunt egestas non at odio.</p>
+          <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean vitae lectus erat. Duis consequat laoreet velit. Mauris convallis, sapien sit amet scelerisque accumsan, felis urna aliquet nunc, viverra mollis odio tellus a nisl. Nulla lobortis lectus non rutrum viverra. Sed et molestie libero. Sed ut ultrices dui.</p>
+        </div>  
+      </div>
+   
+    </div>
+
+
+  
+
+    <div ng-hide="hideContent2" class="text-inter project1Content">
+      <h1 class="projectHead" id="projectHead1">Concert Venues - a study</h1>
+        <div class="container">
+   
+            <div class="col-md-3">
+              <img src="img/DQ_2.png" style="width:100%">
+          
+                <div class="divider"></div>
+            </div>
+          <div class="col-md-7 projectText">
+            <h3>Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa. Nullam condimentum mauris et rhoncus sagittis. Sed eu metus in diam tincidunt egestas non at odio.</p>
+            <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean vitae lectus erat. Duis consequat laoreet velit. Mauris convallis, sapien sit amet scelerisque accumsan, felis urna aliquet nunc, viverra mollis odio tellus a nisl. Nulla lobortis lectus non rutrum viverra. Sed et molestie libero. Sed ut ultrices dui.</p>
+          </div>  
+        </div>
+   
+    </div>
+
+    <!--   <div class="text-inter projectText">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1 id="dancingQ">Dancing Queez - Spotify playlist quiz</h1>
+          <p>This is my final project in the Interactive Programming course. It's a 
+            mobile web app that creates a quiz based on a users Spotify playlist.</p>
+            <div class="carousel-img">
+            <img src="img/c04.jpg" alt="Carousel Img">
+          </div>
+          <div class="carousel-avatar av4">
+          </div>
+          <div class="divider"></div>
+        </div>
+        <div class="col-md-6">
+          <h3>Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed.</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa. Nullam condimentum mauris et rhoncus sagittis. Sed eu metus in diam tincidunt egestas non at odio.</p>
+          <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean vitae lectus erat. Duis consequat laoreet velit. Mauris convallis, sapien sit amet scelerisque accumsan, felis urna aliquet nunc, viverra mollis odio tellus a nisl. Nulla lobortis lectus non rutrum viverra. Sed et molestie libero. Sed ut ultrices dui.</p>
+        </div>  
+      </div>
+    </div>
+    </div> -->
+
+    <div class="container">
+      <div class="row">
+        <div class="controls">
+          
+        </div>
+      </div>
+    </div>
+    <div class="text-inter">
+    <div class="container">
+    </div>
+    </div>
+  
+   <!--  <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <h2>INFUSION</h2>
+          </div>
+          <div class="col-md-5">
+            <p>Nam mi enim, auctor non ultricies a, fringilla eu risus. Praesent vitae lorem et elit tincidunt accumsan suscipit eu libero. Maecenas diam est, venenatis vitae dui in, vestibulum mollis arcu. Donec eu nibh tincidunt, dapibus sem eu, aliquam dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum consectetur commodo eros, vitae laoreet lectus aliq</p>
+          </div>
+          <div class="col-md-3">
+            <p>aliquam dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum consectetur commodo eros, vitae laoreet lectus aliq</p>
+          </div>
+          <div class="col-md-2">
+            <ul class="footer-links">
+              <li><a href="#">List One</a></li>
+              <li><a href="#">Page Two</a></li>
+              <li><a href="#">Design</a></li>
+              <li><a href="#">Work</a></li>
+              <li><a href="#">Contact Me</a></li>
+            </ul>
+          </div>
+          <div>
+ <button ng-click="chiliSpicy()">Chili</button>
+ <button ng-click="jalapenoSpicy()">Jalapeño</button>
+ <p>The food is {{spice}} spicy!</p>
+</div>
+        </div>
+      </div>  
+    </footer> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/unslider.min.js"></script>
+     <script src="app.js"></script>
+
+    <script>
+
+
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = x.length} ;
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "block";  
+    }
+
+    $('a[href^="#"]').on('click', function(event) {
+
+    var target = $( $(this).attr('href') );
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+
+});
+
+    </script>
+  </div>
+
+  <div id="aboutMe" ng-hide="hideAboutMe">
+
+
+  </div>
+  </body>
+</html>
